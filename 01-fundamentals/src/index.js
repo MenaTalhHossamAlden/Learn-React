@@ -26,7 +26,12 @@ const Book = () => {
 const Image = () => <img src='./images/book-1.jpg' alt='Hillbilly Elegy' />;
 const Title = () => <h2>Hillbilly Elegy</h2>;
 const Author = () => {
-  return <h4>J. D. Vance</h4>;
+  const inlineHeadingStyles = {
+    color: '#617d98',
+    fontSize: '0.75',
+    marginTop: '0.5rem',
+  };
+  return <h4 style={inlineHeadingStyles}>J. D. Vance</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
