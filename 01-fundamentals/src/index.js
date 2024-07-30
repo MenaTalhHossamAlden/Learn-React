@@ -8,26 +8,27 @@ const books = [
     author: 'J. D. Vance',
     title: 'Hillbilly Elegy',
     img: './images/book-1.jpg',
+    id: 1,
   },
   {
     author: 'Alex Hirsch',
     title: 'The Book of Bill',
     img: 'https://images-na.ssl-images-amazon.com/images/I/81O6JfipQhL._AC_UL600_SR600,400_.jpg',
+    id: 2,
   },
 ];
 
 const BookList = () => {
   return (
     <section className='booklist'>
-      {books.map((book) => (
-        <Book author={book.author} title={book.title} img={book.img} />
-      ))}
+      {books.map((book) => {
+        return <Book key={book.id} {...book} />;
+      })}
     </section>
   );
-};   
+};
 const Book = (props) => {
   const { img, title, author } = props;
-  console.log(props);
   return (
     <article className='book'>
       <img src={img} alt={title} />
