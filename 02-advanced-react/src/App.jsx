@@ -1,8 +1,8 @@
-import Example from './tutorial/04-project-structure/starter/Example';
+import Starter from './tutorial/06-forms/starter/03-multiple-inputs';
 function App() {
   return (
     <div className="container">
-      <Example />
+      <Starter />
     </div>
   );
 }
